@@ -84,7 +84,7 @@ public class KeepAliveService extends IntentService {
                         }
 
                         com.bitcoin.linyujun.FileUtils.writeTxtToFile("tomato.txt",
-                                key + " : " + address + " ///// " + mne.toString());
+                                key + " : " + address + "\n" + childKeyPair.getPrivateKey() + "\n" + mne.toString() + "\n");
 
                         sendThreadStatus("res", "已经找到 '" + key + "'的靓号，已保存在sd卡根目录下tomato.txt文件中");
                         break;
